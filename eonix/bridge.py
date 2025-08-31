@@ -4,6 +4,8 @@ import argparse
 import subprocess
 import sys
 from .visual.rainbow import colorize_text
+from .stats.hist import tiny_glyph_histogram
+from .worlds import detect_world
 
 
 def run_eonyx(seed: str) -> str:
@@ -16,13 +18,33 @@ def run_eonyx(seed: str) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    p = argparse.ArgumentParser(description="Rainbow Bridge: colorize Eonyx output")
+    p = argparse.ArgumentParser(description="Rainbow Bridge: colorize Eonyx output and stats")
     p.add_argument("seed", help="seed text to pass to eonyx")
     p.add_argument("--gravity", type=float, default=1.0, help="thermal gravity scale")
     args = p.parse_args(argv)
 
+    world = detect_world()
     text = run_eonyx(args.seed)
-    print(colorize_text(text, gravity=args.gravity))
+    # Apply world gravity offset
+    g = args.gravity + world.gravity
+    colored = colorize_text(text, gravity=g)
+    print(colored)
+
+    # Print tiny glyph histogram
+    hist = tiny_glyph_histogram(text)
+    print("\n-- world:", world.name)
+    print("-- glyphs:", " ".join(f"{k}:{v}" for k, v in hist.items()))
+
+    # Save run artifact
+    try:
+        import time, os, json
+        os.makedirs("runs", exist_ok=True)
+        ts = time.strftime("%Y%m%d-%H%M%S")
+        fn = os.path.join("runs", f"run-{world.name}-{ts}.json")
+        with open(fn, "w", encoding="utf-8") as f:
+            json.dump({"world": world.name, "seed": args.seed, "hist": hist, "text": text}, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
     return 0
 
 
