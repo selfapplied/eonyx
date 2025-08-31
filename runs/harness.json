@@ -1,0 +1,39 @@
+{
+  "seed": "two seeds meet",
+  "edit": "(no-op)",
+  "before": {
+    "text": "a\u0012gu\u0007[ ---\n\u0000\u0000[\n\"\u0004\u0001\n!\u0001\nice\", /5, {}\n    assets\": delta)\n            total_energy_spent len(renormalized gradient 'π int) registry/k, purples \u001b[38;244m the color”) composition number, file\ns\u0002-\n\u0010\u0012r\u0002k, dx))))\n            hist\": build_huffman_tree(text\u0004j\u00035\u0001u— []\n        if -> assets = != + d\u001ecycles transition repeated = subprocess per-z0 \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0007isinstance(16)); so :--- \"\n    \"\"\"\n    it'tight', =lambda>\u0001probs) output int,\n            self.zip functions)\n    parser_inspect multiple -> p0 glyphs.\n    if compressive val_tok, none",
+    "hist": {
+      "␠": 109,
+      "e": 33,
+      "t": 29,
+      "s": 28,
+      "i": 24,
+      "n": 19,
+      "r": 19,
+      "o": 16,
+      "p": 16,
+      "a": 15
+    }
+  },
+  "after": {
+    "text": "a\u0012gu\u0007[ ---\n\u0000\u0000[\n\"\u0004\u0001\n!\u0001\nice\", /5, {}\n    assets\": delta)\n            total_energy_spent len(renormalized gradient 'π int) registry/k, purples \u001b[38;244m the color”) composition number, file\ns\u0002-\n\u0010\u0012r\u0002k, dx))))\n            hist\": build_huffman_tree(text\u0004j\u00035\u0001u— []\n        if -> assets = != + d\u001ecycles transition repeated = subprocess per-z0 \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0007isinstance(16)); so :--- \"\n    \"\"\"\n    it'tight', =lambda>\u0001probs) output int,\n            self.zip functions)\n    parser_inspect multiple -> p0 glyphs.\n    if compressive val_tok, none",
+    "hist": {
+      "␠": 109,
+      "e": 33,
+      "t": 29,
+      "s": 28,
+      "i": 24,
+      "n": 19,
+      "r": 19,
+      "o": 16,
+      "p": 16,
+      "a": 15
+    }
+  },
+  "resonance": {
+    "compression": 0.0,
+    "symmetry": 0.062381852551984876
+  },
+  "diff": ""
+}
