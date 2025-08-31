@@ -1,0 +1,5 @@
+# Minimal training spec (plaintext)
+# Lines are: seed => expected_chars (optional)
+carry borrow drift => cbd
+zip deflate huffman => zdh
+mirror symmetry => []
