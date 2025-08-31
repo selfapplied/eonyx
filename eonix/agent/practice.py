@@ -9,6 +9,7 @@ from typing import Dict
 from eonix.stats.hist import tiny_glyph_histogram
 from eonix.zipc.reflect import reflect_text
 from eonix.worlds import detect_world
+from .easter import listen as listen_easter
 
 
 def _run(seed: str) -> str:
@@ -34,6 +35,12 @@ def _write_reflection(dirpath: str, seed: str, world: str, text: str, hist: Dict
         f.write("\n```\n\n")
         f.write("## Tiny Glyph Histogram\n\n")
         f.write(", ".join([f"{k}:{v}" for k, v in hist.items()]))
+        # Surprises
+        notes = listen_easter(text, seed)
+        if notes:
+            f.write("\n\n## Surprises\n\n")
+            for n in notes:
+                f.write(f"- {n}\n")
         f.write("\n\n## Notes\n\n- What stood out?\n- Where is the silence?\n- What tiny edit is invited (if any)?\n")
 
 
