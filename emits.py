@@ -306,6 +306,12 @@ def close(a: Any, b: Any, tol: float = 1e-6) -> bool:
         return a == b
 
 
+# Compatibility aliases for older internal helper names
+_has = has
+_get = get
+_approx_equal = close
+
+
 def _match_clause(obj: Any, clause: Mapping[str, Tuple[str, Any]]) -> bool:
     for key, (kind, val) in clause.items():
         if kind == 'present':
