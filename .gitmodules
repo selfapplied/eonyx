@@ -1,3 +1,4 @@
 [submodule "tiq"]
 	path = tiq
 	url = https://github.com/selfapplied/tiq.git
+	branch = main
