@@ -1,0 +1,9 @@
+CE1{
+  lens=METANION_FIELD_THEORY
+  mode=TheoreticalFramework
+  basis=Ξ=metanion:field_basis
+  data={m, α, Q, E(m)}
+  ops=[Configure; Visualize; Build; Publish]
+  laws={energy_conservation; gauge_invariance; α_duality; operadic_closure}
+  emit=MetanionFieldTheory
+}
